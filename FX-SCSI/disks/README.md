@@ -1,0 +1,1 @@
+You can analyze and browse the SCP disk image using HxCFloppyEmulator v2.14.4.1
