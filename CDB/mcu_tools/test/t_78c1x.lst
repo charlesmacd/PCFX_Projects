@@ -1,0 +1,305 @@
+000: 31           BLOCK   
+001: 48 29        CALB    
+003: 48 2a        CLC     
+005: 61           DAA     
+006: ba           DI      
+007: aa           EI      
+008: 10           EXA     
+009: 50           EXH     
+00a: 11           EXX     
+00b: 48 3b        HALT    
+00d: 21           JB      
+00e: 48 28        JEA     
+010: 48 3a        NEGA    
+012: 00           NOP     
+013: b8           RET     
+014: 62           RETI    
+015: b9           RETS    
+016: 48 38        RLD     
+018: 48 39        RRD     
+01a: 72           SOFTI   
+01b: 48 2b        STC     
+01d: 48 bb        STOP    
+01f: 48 a8        TABLE   
+021: 56 00        ACI     A,$00
+023: 74 56 0a     ACI     H,$0A
+026: 64 52 55     ACI     PC,$55
+029: 46 28        ADI     A,$28
+02b: 74 42 1b     ADI     B,$1B
+02e: 64 c3 06     ADI     EOM,$06
+031: 26 38        ADINC   A,$38
+033: 74 0f 33     ANI     L,$33
+036: 64 7e 22     EQI     MKH,$22
+039: 27 14        GTI     A,$14
+03b: 74 3b 22     LTI     C,$22
+03e: 64 6f 0a     NEI     MKL,$0A
+041: 57 ff        OFFI    A,$FF
+043: 74 4c 00     ONI     D,$00
+046: 64 98 2f     ORI     ANM,$2F
+049: 76 41        SBI     A,$41
+04b: 74 60 07     SUI     V,$07
+04e: 64 b1 62     SUINB   SMH,$62
+051: 16 55        XRI     A,$55
+053: 74 10 0a     XRI     V,$0A
+056: 64 11 40     XRI     PB,$40
+059: 60 d0        ADC     A,V
+05b: 60 50        ADC     V,A
+05d: 60 a2        ADDNC   A,B
+05f: 60 22        ADDNC   B,A
+061: 60 e3        SUB     A,C
+063: 60 63        SUB     C,A
+065: 60 f4        SBB     A,D
+067: 60 74        SBB     D,A
+069: 60 b5        SUBNB   A,E
+06b: 60 35        SUBNB   E,A
+06d: 60 8e        ANA     A,H
+06f: 60 0e        ANA     H,A
+071: 60 9f        ORA     A,L
+073: 60 1f        ORA     L,A
+075: 60 90        XRA     A,V
+077: 60 10        XRA     V,A
+079: 60 aa        GTA     A,B
+07b: 60 2a        GTA     B,A
+07d: 60 bb        LTA     A,C
+07f: 60 3b        LTA     C,A
+081: 60 ec        NEA     A,D
+083: 60 6c        NEA     D,A
+085: 60 fd        EQA     A,E
+087: 60 7d        EQA     E,A
+089: 60 ce        ONA     A,H
+08b: 60 ce        ONA     A,H
+08d: 60 df        OFFA    A,L
+08f: 60 df        OFFA    A,L
+091: 74 d0 10     ADCW    VV:10
+094: 74 a0 20     ADDNCW  VV:20
+097: 74 c0 30     ADDW    VV:30
+09a: 74 e0 40     SUBW    VV:40
+09d: 74 f0 50     SBBW    VV:50
+0a0: 74 b0 60     SUBNBW  VV:60
+0a3: 74 88 70     ANAW    VV:70
+0a6: 74 98 80     ORAW    VV:80
+0a9: 74 90 90     XRAW    VV:90
+0ac: 74 a8 a0     GTAW    VV:A0
+0af: 74 b8 b0     LTAW    VV:B0
+0b2: 74 e8 c0     NEAW    VV:C0
+0b5: 74 f8 d0     EQAW    VV:D0
+0b8: 74 c8 e0     ONAW    VV:E0
+0bb: 74 d8 f0     OFFAW   VV:F0
+0be: 70 d1        ADCX    (BC)
+0c0: 70 a2        ADDNCX  (DE)
+0c2: 70 c3        ADDX    (HL)
+0c4: 70 e4        SUBX    (DE+)
+0c6: 70 f5        SBBX    (HL+)
+0c8: 70 b6        SUBNBX  (DE-)
+0ca: 70 8f        ANAX    (HL-)
+0cc: 70 99        ORAX    (BC)
+0ce: 70 92        XRAX    (DE)
+0d0: 70 ab        GTAX    (HL)
+0d2: 70 bc        LTAX    (DE+)
+0d4: 70 ed        NEAX    (HL+)
+0d6: 70 fe        EQAX    (DE-)
+0d8: 70 cf        ONAX    (HL-)
+0da: 70 d9        OFFAX   (BC)
+0dc: 74 d5        DADC    EA,BC
+0de: 74 a6        DADDNC  EA,DE
+0e0: 74 c7        DADD    EA,HL
+0e2: 74 e5        DSUB    EA,BC
+0e4: 74 f6        DSBB    EA,DE
+0e6: 74 b7        DSUBNB  EA,HL
+0e8: 74 8d        DAN     EA,BC
+0ea: 74 9e        DOR     EA,DE
+0ec: 74 97        DXR     EA,HL
+0ee: 74 ad        DGT     EA,BC
+0f0: 74 be        DLT     EA,DE
+0f2: 74 ef        DNE     EA,HL
+0f4: 74 fd        DEQ     EA,BC
+0f6: 74 ce        DON     EA,DE
+0f8: 74 df        DOFF    EA,HL
+0fa: 05 10 41     ANIW    VV:10,$41
+0fd: 75 20 42     EQIW    VV:20,$42
+100: 25 30 43     GTIW    VV:30,$43
+103: 35 40 44     LTIW    VV:40,$44
+106: 65 50 45     NEIW    VV:50,$45
+109: 45 60 46     ONIW    VV:60,$46
+10c: 55 70 47     OFFIW   VV:70,$47
+10f: 15 80 48     ORIW    VV:80,$48
+112: 40 34 12     CALL    $1234
+115: 54 78 56     JMP     $5678
+118: 70 1f 34 12  LBCD    $1234
+11c: 70 1e 78 56  SBCD    $5678
+120: 70 2f 34 12  LDED    $1234
+124: 70 2e 78 56  SDED    $5678
+128: 70 3f 34 12  LHLD    $1234
+12c: 70 3e 78 56  SHLD    $5678
+130: 70 0f 34 12  LSPD    $1234
+134: 70 0e 78 56  SSPD    $5678
+138: 7c 08        CALF    $0C08
+13a: 8b           CALT    ($0096)
+13b: 5d 20        BIT     5,VV:20
+13d: 5a ff        BIT     2,VV:FF
+13f: 51           DCR     A
+140: 42           INR     B
+141: 48 2f        MUL     C
+143: 48 3d        DIV     A
+145: 48 26        SLL     B
+147: 48 23        SLR     C
+149: 48 05        SLLC    A
+14b: 48 02        SLRC    B
+14d: 48 37        RLL     C
+14f: 48 31        RLR     A
+151: 30 20        DCRW    VV:20
+153: 20 30        INRW    VV:30
+155: 01 40        LDAW    VV:40
+157: 63 50        STAW    VV:50
+159: a8           INX     EA
+15a: a9           DCX     EA
+15b: 32           INX     HL
+15c: 13           DCX     BC
+15d: a5           DMOV    EA,BC
+15e: b7           DMOV    HL,EA
+15f: 48 c1        DMOV    EA,ECPT
+161: 48 d2        DMOV    ETM0,EA
+163: 48 b4        DRLL    EA
+165: 48 a4        DSLL    EA
+167: 48 b0        DRLR    EA
+169: 48 a0        DSLR    EA
+16b: 70 42        EADD    EA,B
+16d: 70 63        ESUB    EA,C
+16f: 00           NOP     
+170: fe           JR      $016F
+171: fd           JR      $016F
+172: 4f 9a        JRE     $010E
+174: 4f 9a        JRE     $0110
+176: c7           JR      $017E
+177: c6           JR      $017E
+178: 4e bb        JRE     $0235
+17a: 4e 62        JRE     $01DE
+17c: 4e 62        JRE     $01E0
+17e: 00           NOP     
+17f: 29           LDAX    (BC)
+180: 2a           LDAX    (DE)
+181: 2b           LDAX    (HL)
+182: 2c           LDAX    (DE+)
+183: 2d           LDAX    (HL+)
+184: 2e           LDAX    (DE-)
+185: 2f           LDAX    (HL-)
+186: ab 14        LDAX    (DE+$14)
+188: ab e2        LDAX    (DE+$E2)
+18a: ac           LDAX    (HL+A)
+18b: ad           LDAX    (HL+B)
+18c: ae           LDAX    (HL+EA)
+18d: af 28        LDAX    (HL+$28)
+18f: af ce        LDAX    (HL+$CE)
+191: 39           STAX    (BC)
+192: 3a           STAX    (DE)
+193: 3b           STAX    (HL)
+194: 3c           STAX    (DE+)
+195: 3d           STAX    (HL+)
+196: 3e           STAX    (DE-)
+197: 3f           STAX    (HL-)
+198: bb 14        STAX    (DE+$14)
+19a: bb e2        STAX    (DE+$E2)
+19c: bc           STAX    (HL+A)
+19d: bd           STAX    (HL+B)
+19e: be           STAX    (HL+EA)
+19f: bf 28        STAX    (HL+$28)
+1a1: bf ce        STAX    (HL+$CE)
+1a3: 48 85        LDEAX   (HL++)
+1a5: 48 94        STEAX   (DE++)
+1a7: 48 8e        LDEAX   (HL+EA)
+1a9: 48 9f fb     STEAX   (HL+$FB)
+1ac: 04 00 20     LXI     SP,$2000
+1af: 34 aa 0a     LXI     HL,$0AAA
+1b2: 44 e9 03     LXI     EA,$03E9
+1b5: 09           MOV     A,EAL
+1b6: 1e           MOV     H,A
+1b7: 4c c0        MOV     A,PA
+1b9: 4d c0        MOV     PA,A
+1bb: 70 6b 00 10  MOV     C,($1000)
+1bf: 70 7c 34 12  MOV     ($1234),D
+1c3: 6c 55        MVI     D,$55
+1c5: 64 83 00     MVI     EOM,$00
+1c8: 71 20 69     MVIW    VV:20,$69
+1cb: 4a 12        MVIX    DE,$12
+1cd: b0           PUSH    VA
+1ce: b1           PUSH    BC
+1cf: a3           POP     HL
+1d0: a4           POP     EA
+1d1: 48 0c        SK      Z
+1d3: 48 1b        SKN     HC
+1d5: 48 49        SKIT    FSR
+1d7: 48 72        SKNIT   AN6
+1d9: 29           LDAX    (BC)
+1da: 29           LDAX    (BC)
+1db: 29           LDAX    (BC)
+1dc: 29           LDAX    (BC)
+1dd: 2a           LDAX    (DE)
+1de: 2a           LDAX    (DE)
+1df: 2a           LDAX    (DE)
+1e0: 2a           LDAX    (DE)
+1e1: 2b           LDAX    (HL)
+1e2: 2b           LDAX    (HL)
+1e3: 2b           LDAX    (HL)
+1e4: 2b           LDAX    (HL)
+1e5: 2c           LDAX    (DE+)
+1e6: 2c           LDAX    (DE+)
+1e7: 2c           LDAX    (DE+)
+1e8: 2c           LDAX    (DE+)
+1e9: 2c           LDAX    (DE+)
+1ea: 2d           LDAX    (HL+)
+1eb: 2d           LDAX    (HL+)
+1ec: 2d           LDAX    (HL+)
+1ed: 2d           LDAX    (HL+)
+1ee: 2d           LDAX    (HL+)
+1ef: 2e           LDAX    (DE-)
+1f0: 2e           LDAX    (DE-)
+1f1: 2e           LDAX    (DE-)
+1f2: 2e           LDAX    (DE-)
+1f3: 2e           LDAX    (DE-)
+1f4: 2f           LDAX    (HL-)
+1f5: 2f           LDAX    (HL-)
+1f6: 2f           LDAX    (HL-)
+1f7: 2f           LDAX    (HL-)
+1f8: 2f           LDAX    (HL-)
+1f9: ac           LDAX    (HL+A)
+1fa: ac           LDAX    (HL+A)
+1fb: ac           LDAX    (HL+A)
+1fc: ac           LDAX    (HL+A)
+1fd: ac           LDAX    (HL+A)
+1fe: ac           LDAX    (HL+A)
+1ff: ac           LDAX    (HL+A)
+200: ac           LDAX    (HL+A)
+201: ad           LDAX    (HL+B)
+202: ad           LDAX    (HL+B)
+203: ad           LDAX    (HL+B)
+204: ad           LDAX    (HL+B)
+205: ad           LDAX    (HL+B)
+206: ad           LDAX    (HL+B)
+207: ad           LDAX    (HL+B)
+208: ad           LDAX    (HL+B)
+209: ae           LDAX    (HL+EA)
+20a: ae           LDAX    (HL+EA)
+20b: ae           LDAX    (HL+EA)
+20c: ae           LDAX    (HL+EA)
+20d: ae           LDAX    (HL+EA)
+20e: ae           LDAX    (HL+EA)
+20f: ae           LDAX    (HL+EA)
+210: ae           LDAX    (HL+EA)
+211: af 12        LDAX    (HL+$12)
+213: af 12        LDAX    (HL+$12)
+215: af 12        LDAX    (HL+$12)
+217: af 12        LDAX    (HL+$12)
+219: ab 12        LDAX    (DE+$12)
+21b: ab 12        LDAX    (DE+$12)
+21d: ab 12        LDAX    (DE+$12)
+21f: ab 12        LDAX    (DE+$12)
+221: 48 84        LDEAX   (DE++)
+223: 48 84        LDEAX   (DE++)
+225: 48 84        LDEAX   (DE++)
+227: 48 84        LDEAX   (DE++)
+229: 48 84        LDEAX   (DE++)
+22b: 48 85        LDEAX   (HL++)
+22d: 48 85        LDEAX   (HL++)
+22f: 48 85        LDEAX   (HL++)
+231: 48 85        LDEAX   (HL++)
+233: 48 85        LDEAX   (HL++)
